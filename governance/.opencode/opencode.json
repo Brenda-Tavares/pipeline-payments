@@ -1,0 +1,7 @@
+{
+  "agent": {
+    "orch":   { "mode": "primary", "model": "<provider>/glm-5.3-flash",     "prompt": "./agents/orch.md" },
+    "code":   { "mode": "primary", "model": "<provider>/deepseek-v4.1-flash","prompt": "./agents/code.md" },
+    "review": { "mode": "primary", "model": "<provider>/mimo-v2.6-flash",   "prompt": "./agents/review.md" }
+  }
+}
