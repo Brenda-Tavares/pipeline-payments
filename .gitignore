@@ -2,3 +2,6 @@
 *.key
 *.pem
 *.token
+governance/
+prompts/
+evidencias/
