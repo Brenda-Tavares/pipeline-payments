@@ -119,7 +119,7 @@ bash teardown.sh
 Ordem: tópico smoke → ACLs → role bindings → SAs (cascata de keys) → pool Flink → cluster (async, aguarda 404) → environment (cascata inclui SR). M1/M2 (keys admin do Console) são preservados. Re-run é idempotente (404 = JÁ REMOVIDO).
 
 ## Evidências
-Evidências reais são geradas pelo operador durante a execução e armazenadas em `evidencias/` (diretório gitignored por política de sigilo). Nenhum valor de segredo, token ou conteúdo de `.env` é versionado ou colado em documentação.
+Evidências são geradas durante a execução e armazenadas em `evidencias/` (diretório gitignored por política de sigilo). Nenhum valor de segredo, token ou conteúdo de `.env` é versionado ou colado em documentação.
 
 Arquivos de evidência:
 - `evidencias/01-fundacao-infraestrutura.md`
