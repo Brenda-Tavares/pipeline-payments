@@ -1,4 +1,4 @@
-# pipeline-payments
+# Pipeline-payments
 
 Pipeline de pagamentos em tempo real: **Neon (Postgres) → CDC Debezium → tópicos Avro → Flink SQL (enriquecimento + fraude) → consumo**. Reproduzível com `./setup.sh` (pré-requisito: `.env` preenchido a partir do `.env.example`).
 
