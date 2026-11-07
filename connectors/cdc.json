@@ -1,0 +1,26 @@
+{
+  "name": "cdc-postgres-desafio",
+  "config": {
+    "connector.class": "PostgresCdcSourceV2",
+    "tasks.max": "1",
+    "database.hostname": "${POSTGRES_HOST}",
+    "database.port": "${POSTGRES_PORT}",
+    "database.user": "cdc_user",
+    "database.password": "${POSTGRES_PASSWORD}",
+    "database.dbname": "${POSTGRES_DB}",
+    "topic.prefix": "desafio-",
+    "table.include.list": "public.customers,public.accounts,public.cards,public.merchants,public.transactions",
+    "plugin.name": "pgoutput",
+    "slot.name": "desafio_cdc_slot",
+    "publication.name": "desafio_cdc_pub",
+    "heartbeat.interval.ms": "60000",
+    "output.data.format": "AVRO",
+    "output.key.format": "AVRO",
+    "key.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "key.converter.schema.registry.url": "${CONFLUENT_SR_URL}",
+    "value.converter.schema.registry.url": "${CONFLUENT_SR_URL}",
+    "errors.tolerance": "none",
+    "errors.log.enable": "true"
+  }
+}

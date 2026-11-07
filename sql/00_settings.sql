@@ -1,0 +1,3 @@
+-- sql/00_settings.sql
+-- Confluent Cloud Flink SQL: idle-timeout aplicado por tabela em sql/01_tables.sql.
+-- Se o workspace rejeitar SET/aspas, ignore este arquivo.

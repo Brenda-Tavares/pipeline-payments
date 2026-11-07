@@ -2,6 +2,7 @@
 *.key
 *.pem
 *.token
-governance/
-prompts/
-evidencias/
+.env.*
+!.env.example
+/governance
+/evidencias

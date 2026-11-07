@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "Customer",
+  "namespace": "com.bootcamp.payments",
+  "doc": "BACKWARD-compatible evolution of Customer: new optional field with default.",
+  "fields": [
+    { "name": "customer_id", "type": "string" },
+    { "name": "full_name", "type": "string", "tags": ["PII"] },
+    { "name": "email", "type": "string", "tags": ["PII"] },
+    { "name": "phone", "type": ["null", "string"], "default": null, "tags": ["PII"] },
+    { "name": "created_at", "type": { "type": "long", "logicalType": "timestamp-millis" } },
+    { "name": "updated_at", "type": { "type": "long", "logicalType": "timestamp-millis" } },
+    { "name": "loyalty_tier", "type": "string", "default": "NONE" }
+  ]
+}

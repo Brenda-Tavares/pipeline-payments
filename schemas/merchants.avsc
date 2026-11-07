@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "Merchant",
+  "namespace": "com.bootcamp.payments",
+  "doc": "Merchant that accepts card payments.",
+  "fields": [
+    { "name": "merchant_id", "type": "string", "doc": "Primary key." },
+    { "name": "name", "type": "string" },
+    { "name": "category", "type": "string" },
+    { "name": "country", "type": "string" },
+    { "name": "created_at", "type": { "type": "long", "logicalType": "timestamp-millis" } }
+  ]
+}

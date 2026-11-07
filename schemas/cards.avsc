@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "Card",
+  "namespace": "com.bootcamp.payments",
+  "doc": "Payment card linked to an account.",
+  "fields": [
+    { "name": "card_id", "type": "string", "doc": "Primary key." },
+    { "name": "account_id", "type": "string" },
+    { "name": "card_number", "type": "string", "tags": ["PCI"] },
+    { "name": "cvv", "type": ["null", "string"], "default": null, "tags": ["PCI"] },
+    { "name": "expiry_month", "type": "int" },
+    { "name": "expiry_year", "type": "int" },
+    { "name": "status", "type": { "type": "enum", "name": "CardStatus", "symbols": ["ACTIVE", "BLOCKED", "EXPIRED"] } },
+    { "name": "created_at", "type": { "type": "long", "logicalType": "timestamp-millis" } }
+  ]
+}

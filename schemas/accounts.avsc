@@ -1,0 +1,20 @@
+{
+  "type": "record",
+  "name": "Account",
+  "namespace": "com.bootcamp.payments",
+  "doc": "Bank account owned by a customer.",
+  "fields": [
+    { "name": "account_id", "type": "string", "doc": "Primary key." },
+    { "name": "customer_id", "type": "string", "tags": ["PII"] },
+    { "name": "account_type", "type": { "type": "enum", "name": "AccountType", "symbols": ["CHECKING", "SAVINGS"] } },
+    {
+      "name": "balance",
+      "type": { "type": "bytes", "logicalType": "decimal", "precision": 15, "scale": 2 },
+      "doc": "Money as decimal(15,2)."
+    },
+    { "name": "currency", "type": "string" },
+    { "name": "status", "type": { "type": "enum", "name": "AccountStatus", "symbols": ["ACTIVE", "BLOCKED", "CLOSED"] } },
+    { "name": "created_at", "type": { "type": "long", "logicalType": "timestamp-millis" } },
+    { "name": "updated_at", "type": { "type": "long", "logicalType": "timestamp-millis" } }
+  ]
+}
